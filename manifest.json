@@ -1,0 +1,59 @@
+{
+  
+   "name":"Screen Recording",
+   "short_name":"Screen Recording",
+   "version":"1.0",
+   "manifest_version":2,
+   "minimum_chrome_version":"49",
+   "incognito":"not_allowed",
+   "description":"Screen and Tab Recording with microphone and camera.",
+   "background":{  
+      "scripts":[  
+         "js/background.js",
+         "js/RecordRTC.min.js"
+      ],
+      "persistent":false
+   },
+   "content_scripts":[  
+      {  
+         "matches":[  
+            "<all_urls>"
+         ],
+         "js":[  
+            "js/content-script.js"
+         ]
+      }
+   ],
+   "browser_action":{  
+      "default_icon":"images/main-icon.png",
+      "default_title":"Record Screen",
+      "default_title": "Screen Recording",      // optional; shown in tooltip
+      "default_popup": "popup.html" 
+   },
+   "icons":{  
+      "16":"images/main-icon.png",
+      "22":"images/main-icon.png",
+      "32":"images/main-icon.png",
+      "48":"images/main-icon.png",
+      "128":"images/main-icon.png"
+   },
+   "permissions":[  
+      "desktopCapture",
+      "storage",
+      "contextMenus",
+      "tabs",
+      "<all_urls>",
+      "tabCapture",
+      "activeTab"
+   ],
+   "web_accessible_resources":[  
+      "images/main-icon.png",
+      "camera.html",
+      "js/camera.js",
+      "css/inject.css",
+      "css/jquery-ui.css",
+      "js/jquery-1.10.2.js",
+      "js/jquery-ui.js",
+      "js/inject.js"
+   ]
+}

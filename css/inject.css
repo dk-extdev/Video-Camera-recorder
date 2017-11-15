@@ -1,0 +1,20 @@
+#draggable { 
+	top:0px;
+	right:0px;
+	width: 150px; 
+	height: 150px; 
+	border:0px;
+	margin:0;
+	padding:0;
+	z-index:9999; 
+	background:white;
+	position: absolute;
+}
+#video-iframe {
+    display:block;
+    width:150px;
+    height:150px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
